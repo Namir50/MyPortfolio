@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namir's Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Namir Shah</h1>
+            <h3>Software Engineer</h3>
+            <img src="{{ url_for('static', filename='images/pp.avif') }}" alt="Namir's Profile picture" class="profile-pic">
+            <p>Hey! I'm Namir Shah, a passionate engineer who is fond of AI, ML, and Data Science</p>
+            <h4>You can checkout my Resume as well!</h4>
+            <a href= "https://drive.google.com/file/d/1993DzHILRb3ztywR2GDbHQcEziL4pWqv/view?usp=sharing">Click Here</a>
+            <h4>Let's give you a tour of my Portfolio</h4>
+            <nav>
+                <a href="#about">About Me</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I’m Namir Shah, a passionate and dedicated Software Engineer with a strong focus on Artificial Intelligence (AI), Machine Learning (ML), and Data Science. I am a Data Engineering student who is deeply committed to solving complex problems using cutting-edge technologies and building solutions that make a positive impact on the world.</p>
+        <p>I enjoy exploring new ways to leverage AI and ML to solve real-world challenges, and I’m constantly learning and adapting to stay at the forefront of technological advancements. My journey in technology is driven by a desire to create systems that can benefit people and society, while also expanding my own knowledge and skill set.</p>
+        <p>When I’m not immersed in code, you can find me researching the latest developments in AI, brainstorming innovative solutions, or discussing ideas with fellow enthusiasts. I’m always open to learning, collaborating, and connecting with like-minded individuals.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <div class="project">
+                <h3>Animal Species Recognition</h3>
+                <p>The Animal Species Recognition project uses the ResNet50 model, a deep learning architecture known for its powerful feature extraction capabilities. By leveraging this pre-trained model, it classifies animal species from images with high accuracy. The model's residual connections enable effective learning of complex patterns, making it suitable for real-time applications in wildlife conservation, pet identification, and education, helping to monitor biodiversity and raise awareness about endangered species.</p>
+            </div>
+            <div class="project">
+                <h3>Future Bitcoin Price Prediction WebApp</h3>
+                <p>The Future Bitcoin Price Prediction web app, built with Flask, uses machine learning to predict Bitcoin prices for a future date. Users input a specific date, and the app utilizes a trained model based on historical price data to forecast Bitcoin's value on that date. This provides users with valuable insights into potential market trends, helping them make informed decisions related to cryptocurrency investments and trading strategies.</p>
+            </div>
+            <div class="project">
+                <h3>Crypto Trading Assistant</h3>
+                <p>The Crypto Trading Assistant uses the RandomForestRegressor algorithm, a powerful machine learning model, to predict the best times to buy and sell cryptocurrencies. By analyzing historical price data, the model makes accurate price predictions and identifies optimal trading opportunities. The RandomForestRegressor, with its ensemble learning approach, combines multiple decision trees to improve prediction accuracy and reduce overfitting. This enables users to make data-driven, informed decisions for maximizing their trading profits.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me through the following platforms</p>
+        <div class="contact-links">
+            <div class="contact-item">
+                <h3>Gmail</h3>
+                <a href="mailto:namirsayyef50@gmail.com" target="_blank">namirsayyef50@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <h3>GitHub</h3>
+                <a href="https://github.com/Namir50" target="_blank">https://github.com/Namir50</a>
+            </div>
+            <div class="contact-item">
+                <h3>LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/namir-shah-2a461724b/" target="_blank">https://www.linkedin.com/in/namir-shah-2a461724b/</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
