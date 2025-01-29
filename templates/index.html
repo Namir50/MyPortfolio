@@ -9,23 +9,22 @@
 </head>
 
 <body>
-    <header>
+    <header id = 'MainPage'>
         <div class="container">
-          <section id = "Main">
-            <h1>Namir Shah</h1>
-            <h3>Software Engineer</h3>
-            <img src="{{ url_for('static', filename='images/pp.avif') }}" alt="Namir's Profile picture" class="profile-pic">
-            <p>Hey! I'm Namir Shah, a passionate engineer who is fond of AI, ML, and Data Science</p>
-            <h4>You can checkout my Resume as well!</h4>
-            <a href= "https://drive.google.com/file/d/1993DzHILRb3ztywR2GDbHQcEziL4pWqv/view?usp=sharing">Click Here</a>
-            <h4>Let's give you a tour of my Portfolio</h4>
-            <nav>
-                <a href = "#Main">Main</a>
-                <a href="#about">About Me</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
-          </section>
+                <h1>Namir Shah</h1>
+                <h3>Software Engineer</h3>
+                <img src="{{ url_for('static', filename='images/pp.avif') }}" alt="Namir's Profile picture" class="profile-pic">
+                <p>Hey! I'm Namir Shah, a passionate engineer who is fond of AI, ML, and Data Science</p>
+                <h4>You can checkout my Resume as well!</h4>
+                <a href="https://drive.google.com/file/d/1993DzHILRb3ztywR2GDbHQcEziL4pWqv/view?usp=sharing" target="_blank">Click Here</a>
+                <h4>Let's give you a tour of my Portfolio</h4>
+                <nav>
+                    <a href="#MainPage">Home Page</a>
+                    <a href="#about">About Me</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#contact">Contact</a>
+                </nav>           
         </div>
     </header>
 
@@ -52,6 +51,25 @@
             <div class="project">
                 <h3>Crypto Trading Assistant</h3>
                 <p>The Crypto Trading Assistant uses the RandomForestRegressor algorithm, a powerful machine learning model, to predict the best times to buy and sell cryptocurrencies. By analyzing historical price data, the model makes accurate price predictions and identifies optimal trading opportunities. The RandomForestRegressor, with its ensemble learning approach, combines multiple decision trees to improve prediction accuracy and reduce overfitting. This enables users to make data-driven, informed decisions for maximizing their trading profits.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-list">
+            <div class="experience-item">
+                <h3>Computer Vision intern at MagikKraft</h3>
+                <p>As a computer vision intern, I developed a model to detect solar panels by annotating images, training object detection models, and optimizing the system for accurate identification in diverse environments</p>
+            <div>
+            <div class = "experience-item">
+                <h3>Data Analyst intern at 5nance.com</h3>
+                <p>As a data analyst, I collected, cleaned, and analyzed data, applied statistical methods to identify trends, generated insights, created visualizations, and supported decision-making processes for business strategies and operations</p>
+            </div>
+            <div class = "experience-item">
+                <h3>Student intern at Static.int</h3>
+                <p>As a Student intern, I assisted in writing and optimizing Python scripts, implemented data processing workflows, and contributed to building software applications, focusing on enhancing efficiency and functionality</p>
+                
             </div>
         </div>
     </section>
