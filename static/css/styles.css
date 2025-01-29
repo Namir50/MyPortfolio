@@ -253,7 +253,7 @@ section p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); /* Adjust min width */
     gap: 20px;
-    padding: 20px; /* Reduce large padding */
+    padding: 10px; /* Reduce large padding */
     margin-top: 30px;
     padding-left: 200px; /* Reduced left padding */
     padding-right: 200px; /* Reduced right padding */
