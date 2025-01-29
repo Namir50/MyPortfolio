@@ -313,8 +313,11 @@ section p {
     }
 
     /* Reduce header size */
-    header {
-        padding: 15px;
+    header p {
+        font-size: 14px; /* Reduce font size */
+        white-space: normal; /* Allow the text to wrap */
+        overflow: visible; /* Ensure the text isn't clipped */
+        letter-spacing: 0.1em; /* Adjust letter-spacing for better readability */
     }
 
     header p{
