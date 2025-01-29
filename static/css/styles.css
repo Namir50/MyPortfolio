@@ -325,10 +325,8 @@ section p {
     }
 
     /* Stack navigation links vertically */
-    nav {
-        flex-direction: column;
-        text-align: center;
-        padding: 5px;
+    .nav {
+        display: none;
     }
 
     nav a {
