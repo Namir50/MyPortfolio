@@ -251,7 +251,7 @@ section p {
 /* Project Styles */
 .project-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); /* Adjust min width */
+    grid-template-columns: 1fr; /* Adjust min width */
     gap: 20px;
     padding: 10px; /* Reduce large padding */
     margin-top: 30px;
