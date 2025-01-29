@@ -317,6 +317,10 @@ section p {
         padding: 15px;
     }
 
+    header p{
+        font-size:10px;
+    }
+
     /* Stack navigation links vertically */
     nav {
         flex-direction: column;
