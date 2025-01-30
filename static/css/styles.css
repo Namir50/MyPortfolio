@@ -326,9 +326,11 @@ section p {
 
     /* Stack navigation links vertically */
     nav {
-        display: none !important;
-
-    }
+            display: none !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            overflow: hidden !important;
+        }
 
     /* Adjust profile section */
     .profile .profile-pic {
