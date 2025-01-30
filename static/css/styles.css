@@ -306,6 +306,10 @@ section p {
     transition: color 0.3s ease;
 }
 
+.hidden {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
     /* Ensure proper scaling */
     body {
@@ -325,11 +329,8 @@ section p {
     }
 
     /* Stack navigation links vertically */
-    nav {
-            display: none !important;
-            visibility: hidden !important;
-            height: 0 !important;
-            overflow: hidden !important;
+    nav{
+
         }
 
     /* Adjust profile section */
