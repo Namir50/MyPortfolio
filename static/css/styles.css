@@ -306,7 +306,7 @@ section p {
     transition: color 0.3s ease;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     /* Ensure proper scaling */
     body {
         font-size: 16px;
