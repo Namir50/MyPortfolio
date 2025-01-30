@@ -325,15 +325,9 @@ section p {
     }
 
     /* Stack navigation links vertically */
-    .nav {
-        display: none;
+    nav {
+        display: none !important;
 
-    }
-
-    nav a {
-        display: block;
-        margin: 5px 0;
-        font-size: 16px;
     }
 
     /* Adjust profile section */
