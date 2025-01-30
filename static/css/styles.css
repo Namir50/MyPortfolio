@@ -326,9 +326,8 @@ section p {
 
     /* Stack navigation links vertically */
     .nav {
-        flex-direction: column;
-        text-align: center;
-        padding: 5px;
+        display: none;
+
     }
 
     nav a {
