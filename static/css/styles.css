@@ -363,30 +363,17 @@ section p {
 
 @media screen and (max-width: 768px) {
     .sidenav {
-        width: 0;
-        background-color: #000; /* fully opaque on mobile */
-    }
-
-    .sidenav.open {
-        width: 100vw;
-        height: 100vh;
-    }
-
-    .sidenav a {
-        font-size: 24px;
-        text-align: center;
-        border-bottom: 1px solid #444;
-        padding: 20px 0;
-    }
-
-    .menu-btn {
-        font-size: 32px;
-        color: white;
-        top: 20px;
-        left: 20px;
+        background-color: rgba(0, 0, 0, 0.97); /* Make sidebar nearly opaque */
+        backdrop-filter: blur(2px); /* Optional slight blur behind it */
     }
 
     body.sidebar-open {
         overflow: hidden;
+    }
+
+    #MainPage,
+    header,
+    section {
+        z-index: 0; /* Push main content behind the sidebar */
     }
 }
