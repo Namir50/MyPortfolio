@@ -362,42 +362,31 @@ section p {
 }
 
 @media screen and (max-width: 768px) {
-    /* Ensure proper scaling */
-    body {
-        font-size: 16px;
+    .sidenav {
+        width: 0;
+        background-color: #000; /* fully opaque on mobile */
     }
 
-    /* Reduce header size */
-    header p {
-        font-size: 14px; /* Reduce font size */
-        white-space: normal; /* Allow the text to wrap */
-        overflow: visible; /* Ensure the text isn't clipped */
-        letter-spacing: 0.1em; /* Adjust letter-spacing for better readability */
+    .sidenav.open {
+        width: 100vw;
+        height: 100vh;
     }
 
-    header p{
-        font-size:10px;
+    .sidenav a {
+        font-size: 24px;
+        text-align: center;
+        border-bottom: 1px solid #444;
+        padding: 20px 0;
     }
 
-    /* Stack navigation links vertically */
-    nav{
-
-        }
-
-    /* Adjust profile section */
-    .profile .profile-pic {
-        width: 120px;
-        height: 120px;
+    .menu-btn {
+        font-size: 32px;
+        color: white;
+        top: 20px;
+        left: 20px;
     }
 
-    /* Reduce section padding */
-    section {
-        padding: 40px 20px; /* Less padding for mobile */
-    }
-
-    /* Make projects stack in 1 column */
-    .project-list {
-        grid-template-columns: 1fr; /* Stack projects vertically */
-        padding: 10px;
+    body.sidebar-open {
+        overflow: hidden;
     }
 }
