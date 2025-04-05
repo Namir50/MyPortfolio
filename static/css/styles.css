@@ -362,18 +362,35 @@ section p {
 }
 
 @media screen and (max-width: 768px) {
-    .sidenav {
-        background-color: rgba(0, 0, 0, 0.97); /* Make sidebar nearly opaque */
-        backdrop-filter: blur(2px); /* Optional slight blur behind it */
+    /* Ensure proper scaling */
+    body {
+        font-size: 16px;
     }
 
-    body.sidebar-open {
-        overflow: hidden;
+    /* Reduce header size */
+    header p {
+        font-size: 14px; /* Reduce font size */
+        white-space: normal; /* Allow the text to wrap */
+        letter-spacing: 0.1em; /* Adjust letter-spacing for better readability */
     }
 
-    #MainPage,
-    header,
+    header p{
+        font-size:10px;
+    }
+    /* Adjust profile section */
+    .profile .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Reduce section padding */
     section {
-        z-index: 0; /* Push main content behind the sidebar */
+        padding: 40px 20px; /* Less padding for mobile */
+    }
+
+    /* Make projects stack in 1 column */
+    .project-list {
+        grid-template-columns: 1fr; /* Stack projects vertically */
+        padding: 10px;
     }
 }
