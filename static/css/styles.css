@@ -268,3 +268,11 @@ h2 {
   color: #ccc;
   word-break: break-all;
 }
+
+
+
+@media (max-width: 768px) {
+  .scale-wrapper {
+    transform: scale(1);
+  }
+}
