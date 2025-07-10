@@ -22,7 +22,8 @@ body {
     border: none;
     color: #f0f0f0;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 2000;
+    display: block;
 }
 
 /* Theme Toggle Button (Top-Right Corner) */
@@ -339,11 +340,24 @@ h2 {
   word-break: break-all;
 }
 
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
 
 
 @media (max-width: 768px) {
-  .scale-wrapper {
-    transform: scale(1);
+  .menu-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 2000;
   }
-
 }

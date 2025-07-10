@@ -7,9 +7,8 @@
     <title>Namir's Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <button id="menuBtn" class="menu-btn" onclick="toggleNav()">&#9776;</button>
-
     
+
     <script>
         function toggleNav() {
             let sideNav = document.getElementById("sideNav");
@@ -24,170 +23,174 @@
             }
         }
 
-
         function toggleTheme(button) {
-        document.body.classList.toggle("light-mode");
-        if (document.body.classList.contains("light-mode")) {
-            button.textContent = "☀️";  // Light mode → Sun
-        } else {
-            button.textContent = "🌙";  // Dark mode → Moon (default)
+            document.body.classList.toggle("light-mode");
+            if (document.body.classList.contains("light-mode")) {
+                button.textContent = "☀️";  // Light mode → Sun
+            } else {
+                button.textContent = "🌙";  // Dark mode → Moon (default)
+            }
         }
-        }
-
-
     </script>
-
 </head>
 
 <body>
-  <div class="scale-wrapper">
+    <button id="menuBtn" class="menu-btn" onclick="toggleNav()">&#9776;</button>
+    <div class="scale-wrapper">
     
-    <button class="theme-toggle" onclick="toggleTheme(this)">🌙</button>
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle" onclick="toggleTheme(this)">🌙</button>
 
+        <!-- Side Navigation (Now stays open until manually closed) -->
+        <div id="sideNav" class="sidenav">
+            <a href="#MainPage">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </div>
 
+        <!-- Main Content -->
+        <header id="MainPage" class="fade-in">
+            <div class="container">
+                <h1 class="btn-shine">Namir Shah</h1>
+                <h3>Software Engineer</h3>
+                <img src="{{ url_for('static', filename='images/digital_avatar7.jpg') }}" alt="Namir's Profile picture" class="profile-pic">
+                <p>Hello, I’m Namir Shah, an engineer driven by a deep fascination for Artificial Intelligence, Machine Learning, and Data Science</p>
+                <h4>You can checkout my Resume as well!</h4>
+                <a href="https://drive.google.com/file/d/1379vhCOI28ylo9i_5Opiiy6G_6DDE2SX/view?usp=sharing" target="_blank">Click Here</a>
+            </div>
+        </header>
 
-    <!-- Side Navigation -->
-    <div id="sideNav" class="sidenav">
-        <a href="#MainPage" onclick="toggleNav()">Home</a>
-        <a href="#about" onclick="toggleNav()">About Me</a>
-        <a href="#projects" onclick="toggleNav()">Projects</a>
-        <a href="#experience" onclick="toggleNav()">Experience</a>
-        <a href="#contact" onclick="toggleNav()">Contact</a>
+        <!-- About Section -->
+        <section id="about">
+            <h2>
+                <span class="spinner-wrapper">
+                    <div class="spinner"></div>
+                    <div class="spinner1"></div>
+                </span>
+                About
+            </h2>
+            <p>Hi, I’m Namir Shah, a passionate and dedicated Software Engineer with a strong focus on Artificial Intelligence (AI), Machine Learning (ML), and Data Science. 
+                I am a Data Engineering graduate who is deeply committed to solving complex problems using cutting-edge technologies and building solutions that make a positive impact on the world.
+                I enjoy exploring new ways to leverage AI and ML to solve real-world challenges, and I’m constantly learning and adapting to stay at the forefront of technological advancements. My journey in technology is driven by a desire to create systems that can benefit people and society, while also expanding my own knowledge and skill set.
+                When I’m not immersed in code, you can find me researching the latest developments in AI, brainstorming innovative solutions, or discussing ideas with fellow enthusiasts. I’m always open to learning, collaborating, and connecting with like-minded individuals.</p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>
+                <span class="spinner-wrapper">
+                    <div class="spinner"></div>
+                    <div class="spinner1"></div>
+                </span>
+                Projects
+            </h2>
+
+            <div class="project-list">
+                <!-- Project 1 -->
+                <div class="project">
+                    <h3>Netflix Stock Price Prediction Web App</h3>
+                    <p>
+                        Designed and deployed an end-to-end Machine Learning web application to forecast Netflix’s future closing stock prices using Lasso Regression. The project encompasses the full ML pipeline, including data preprocessing, feature engineering, model experimentation, and deployment using Flask for real-time predictions.
+                    </p>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project">
+                    <h3>Amazon Product Data ETL Pipeline</h3>
+                    <p>
+                        Built an end-to-end ETL pipeline that extracts Amazon product data for PS5 games using BeautifulSoup. The pipeline performs thorough data transformation and cleaning with Pandas, then loads the processed data into Snowflake for advanced analysis and reporting. This solution enables efficient tracking of product trends, pricing, and availability.
+                    </p>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project">
+                    <h3>Spotify Data Analysis</h3>
+                    <p>
+                        Developed an end-to-end data analytics project analyzing global music streaming trends using Spotify Charts data. Utilized Python for data wrangling and exploratory analysis, followed by Power BI to create interactive visualizations. The project highlights key insights on the most-streamed songs, top artists, and regional listening behaviors worldwide.
+                    </p>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project">
+                    <h3>Retail Sales Analysis</h3>
+                    <p>
+                        Analyzed over 1,500 retail transactions after preprocessing the dataset to ensure data quality. Utilized SQL to uncover key business insights such as top-performing customers, best-selling product categories, and monthly sales trends. This analysis supported data-driven decision-making for sales strategy and customer segmentation.
+                    </p>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project">
+                    <h3>Animal Species Recognition</h3>
+                    <p>The Animal Species Recognition project uses the ResNet50 model, a deep learning architecture known for its powerful feature extraction capabilities. By leveraging this pre-trained model, it classifies animal species from images with high accuracy. The model's residual connections enable effective learning of complex patterns, making it suitable for real-time applications in wildlife conservation, pet identification, and education, helping to monitor biodiversity and raise awareness about endangered species</p>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project">
+                    <h3>Future Bitcoin Price Prediction Web App</h3>
+                    <p>The Future Bitcoin Price Prediction web app, built with Flask, uses machine learning to predict Bitcoin prices for a future date. Users input a specific date, and the app utilizes a trained model based on historical price data to forecast Bitcoin's value on that date. This provides users with valuable insights into potential market trends, helping them make informed decisions related to cryptocurrency investments and trading strategies.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2>
+                <span class="spinner-wrapper">
+                    <div class="spinner"></div>
+                    <div class="spinner1"></div>
+                </span>
+                Experience
+            </h2>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <h3>Computer Vision intern at MagikKraft</h3>
+                    <p>As a computer vision intern, I developed a model to detect solar panels by annotating images, training object detection models, and optimizing the system for accurate identification in diverse environments</p>
+                </div>
+                <div class="experience-item">
+                    <h3>Data Analyst intern at 5nance.com</h3>
+                    <p>As a data analyst, I collected, cleaned, and analyzed data, applied statistical methods to identify trends, generated insights, created visualizations, and supported decision-making processes for business strategies and operations</p>
+                </div>
+                <div class="experience-item">
+                    <h3>Machine Learning Intern at BharatIntern</h3>
+                    <p>
+                        Applied data cleaning, feature engineering, and transformation to prepare datasets for modeling. Improved prediction accuracy by 18% using ML models (Linear Regression, Random Forests) and designed insightful visualizations with Matplotlib and Seaborn.
+                    </p>
+                </div>
+                <div class="experience-item">
+                    <h3>Student intern at Static.int</h3>
+                    <p>As a Student intern, I assisted in writing and optimizing Python scripts, implemented data processing workflows, and contributed to building software applications, focusing on enhancing efficiency and functionality</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>
+                <span class="spinner-wrapper">
+                    <div class="spinner"></div>
+                    <div class="spinner1"></div>
+                </span>
+                Contact
+            </h2>
+            <p>Feel free to reach out to me through the following platforms:</p>
+            <div class="contact-links">
+                <a href="mailto:namirsayyed50@gmail.com" target="_blank" class="contact-item">
+                    <h3>Gmail</h3>
+                    <p>namirsayyed50@gmail.com</p>
+                </a>
+                <a href="https://github.com/Namir50" target="_blank" class="contact-item">
+                    <h3>GitHub</h3>
+                    <p>https://github.com/Namir50</p>
+                </a>
+                <a href="https://www.linkedin.com/in/namir-shah-2a461724b/" target="_blank" class="contact-item">
+                    <h3>LinkedIn</h3>
+                    <p>https://www.linkedin.com/in/namir-shah-2a461724b/</p>
+                </a>
+            </div>
+        </section>
     </div>
-
-
-    <!-- Main Content -->
-    <header id="MainPage">
-        <div class="container">
-            <h1 class="btn-shine">Namir Shah</h1>
-            <h3>Software Engineer</h3>
-            <img src="{{ url_for('static', filename='images/digital_avatar7.jpg') }}" alt="Namir's Profile picture" class="profile-pic">
-            <p>Hello, I’m Namir Shah, an engineer driven by a deep fascination for Artificial Intelligence, Machine Learning, and Data Science</p>
-            <h4>You can checkout my Resume as well!</h4>
-            <a href="https://drive.google.com/file/d/1379vhCOI28ylo9i_5Opiiy6G_6DDE2SX/view?usp=sharing" target="_blank">Click Here</a>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>
-        <span class="spinner-wrapper">
-            <div class="spinner"></div>
-            <div class="spinner1"></div>
-        </span>
-        About
-        </h2>
-        <p>Hi, I’m Namir Shah, a passionate and dedicated Software Engineer with a strong focus on Artificial Intelligence (AI), Machine Learning (ML), and Data Science. 
-           I am a Data Engineering graduate who is deeply committed to solving complex problems using cutting-edge technologies and building solutions that make a positive impact on the world.
-           I enjoy exploring new ways to leverage AI and ML to solve real-world challenges, and I’m constantly learning and adapting to stay at the forefront of technological advancements. My journey in technology is driven by a desire to create systems that can benefit people and society, while also expanding my own knowledge and skill set.
-           When I’m not immersed in code, you can find me researching the latest developments in AI, brainstorming innovative solutions, or discussing ideas with fellow enthusiasts. I’m always open to learning, collaborating, and connecting with like-minded individuals.</p>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>
-          <span class="spinner-wrapper">
-           <div class="spinner"></div>
-           <div class="spinner1"></div>
-          </span>
-          Projects
-        </h2> 
-
-        <div class="project-list">
-            <div class="project">
-                <h3>Netflix Stock Price Prediction Web App</h3>
-                <p>
-                    Designed and deployed an end-to-end Machine Learning web application to forecast Netflix’s future closing stock prices using Lasso Regression. The project encompasses the full ML pipeline, including data preprocessing, feature engineering, model experimentation, and deployment using Flask for real-time predictions.
-                </p>
-            </div>
-            <div class="project">
-                <h3>Amazon Product Data ETL Pipeline</h3>
-                <p>
-                Built an end-to-end ETL pipeline that extracts Amazon product data for PS5 games using BeautifulSoup. The pipeline performs thorough data transformation and cleaning with Pandas, then loads the processed data into Snowflake for advanced analysis and reporting. This solution enables efficient tracking of product trends, pricing, and availability.
-                </p>
-            </div>
-            <div class="project">
-                <h3>Spotify Data Analysis</h3>
-                <p>
-                    Developed an end-to-end data analytics project analyzing global music streaming trends using Spotify Charts data. Utilized Python for data wrangling and exploratory analysis, followed by Power BI to create interactive visualizations. The project highlights key insights on the most-streamed songs, top artists, and regional listening behaviors worldwide.
-                </p>
-            </div>
-           
-            <div class="project">
-                <h3>Retail Sales Analysis</h3>
-                <p>
-                    Analyzed over 1,500 retail transactions after preprocessing the dataset to ensure data quality. Utilized SQL to uncover key business insights such as top-performing customers, best-selling product categories, and monthly sales trends. This analysis supported data-driven decision-making for sales strategy and customer segmentation.
-                </p>
-            </div>
-
-            <div class="project">
-                <h3>Animal Species Recognition</h3>
-                <p>The Animal Species Recognition project uses the ResNet50 model, a deep learning architecture known for its powerful feature extraction capabilities. By leveraging this pre-trained model, it classifies animal species from images with high accuracy. The model's residual connections enable effective learning of complex patterns, making it suitable for real-time applications in wildlife conservation, pet identification, and education, helping to monitor biodiversity and raise awareness about endangered species</p>
-            </div>
-            <div class="project">
-                <h3>Future Bitcoin Price Prediction Web App</h3>
-                <p>The Future Bitcoin Price Prediction web app, built with Flask, uses machine learning to predict Bitcoin prices for a future date. Users input a specific date, and the app utilizes a trained model based on historical price data to forecast Bitcoin's value on that date. This provides users with valuable insights into potential market trends, helping them make informed decisions related to cryptocurrency investments and trading strategies.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2>
-        <span class="spinner-wrapper">
-            <div class="spinner"></div>
-            <div class="spinner1"></div>
-        </span>
-        Experience
-        </h2>
-        <div class="experience-list">
-            <div class="experience-item">
-                <h3>Computer Vision intern at MagikKraft</h3>
-                <p>As a computer vision intern, I developed a model to detect solar panels by annotating images, training object detection models, and optimizing the system for accurate identification in diverse environments</p>
-            </div>
-            <div class="experience-item">
-                <h3>Data Analyst intern at 5nance.com</h3>
-                <p>As a data analyst, I collected, cleaned, and analyzed data, applied statistical methods to identify trends, generated insights, created visualizations, and supported decision-making processes for business strategies and operations</p>
-            </div>
-            <div class="experience-item">
-                <h3>Machine Learning Intern at BharatIntern</h3>
-                <p>
-                    Applied data cleaning, feature engineering, and transformation to prepare datasets for modeling. Improved prediction accuracy by 18% using ML models (Linear Regression, Random Forests) and designed insightful visualizations with Matplotlib and Seaborn.
-                </p>
-            </div>
-            <div class="experience-item">
-                <h3>Student intern at Static.int</h3>
-                <p>As a Student intern, I assisted in writing and optimizing Python scripts, implemented data processing workflows, and contributed to building software applications, focusing on enhancing efficiency and functionality</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>
-        <span class="spinner-wrapper">
-            <div class="spinner"></div>
-            <div class="spinner1"></div>
-        </span>
-        Contact
-        </h2>
-        <p>Feel free to reach out to me through the following platforms:</p>
-        <div class="contact-links">
-            <a href="mailto:namirsayyed50@gmail.com" target="_blank" class="contact-item">
-            <h3>Gmail</h3>
-            <p>namirsayyed50@gmail.com</p>
-            </a>
-            <a href="https://github.com/Namir50" target="_blank" class="contact-item">
-            <h3>GitHub</h3>
-            <p>https://github.com/Namir50</p>
-            </a>
-            <a href="https://www.linkedin.com/in/namir-shah-2a461724b/" target="_blank" class="contact-item">
-            <h3>LinkedIn</h3>
-            <p>https://www.linkedin.com/in/namir-shah-2a461724b/</p>
-            </a>
-        </div>
-    </section>
-  </div> 
 </body>
 
 </html>
