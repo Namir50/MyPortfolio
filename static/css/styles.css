@@ -9,6 +9,8 @@ body {
     line-height: 1.6;
     background: radial-gradient(#1b2735 50%, #090a0f 100%);
     background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100dvh;
 }
 
 /* Hamburger Menu Button */
