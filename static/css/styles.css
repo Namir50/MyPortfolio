@@ -55,16 +55,26 @@ body {
 /* Light Mode Styles */
 body.light-mode {
   background: #acbeff !important;
-  color: #111111 !important;
 }
 
-body.light-mode header h1,
 body.light-mode h2,
 body.light-mode h3,
+body.light-mode h4,
 body.light-mode p,
 body.light-mode a {
   color: #000000 !important;
 }
+
+body.light-mode header h1 {
+  background: linear-gradient(90deg, #000000, #ccc, #555);
+  background-size: 200% auto;
+  background-clip: text;              /* Standard Property (future-proof) */
+  -webkit-background-clip: text;      /* For WebKit (Chrome, Safari) */
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+
 
 body.light-mode .menu-btn,
 body.light-mode .theme-toggle {
@@ -139,7 +149,7 @@ header {
 header h1 {
   font-size: 48px;
   font-weight: 600;
-  background: linear-gradient(90deg, #9f9f9f, #fff, #868686);
+  background: linear-gradient(90deg, #ffffff, #cdcdcd, #868686);
   background-size: 200% auto;
   color: #fff;
   background-clip: text;
