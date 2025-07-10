@@ -9,7 +9,6 @@ body {
     line-height: 1.6;
     background: radial-gradient(#1b2735 50%, #090a0f 100%);
     background-size: cover;
-    background-attachment: fixed;
 }
 
 /* Hamburger Menu Button */
@@ -99,7 +98,7 @@ body.light-mode .contact-links a.contact-item {
 }
 
 body.light-mode .project:hover,
-body.light-mode .experience-item:hover,
+body.light-mode .experience-item:hoveQAAr,
 body.light-mode .contact-item:hover,
 body.light-mode .contact-links a.contact-item:hover {
   background: rgba(0, 0, 0, 0.1);
