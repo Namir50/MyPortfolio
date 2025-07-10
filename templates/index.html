@@ -22,6 +22,18 @@
                 menuBtn.innerHTML = "&times;"; // Close icon (✖️)
             }
         }
+
+
+        function toggleTheme(button) {
+        document.body.classList.toggle("light-mode");
+        if (document.body.classList.contains("light-mode")) {
+            button.textContent = "☀️";  // Light mode → Sun
+        } else {
+            button.textContent = "🌙";  // Dark mode → Moon (default)
+        }
+        }
+
+
     </script>
 
 </head>
@@ -29,6 +41,9 @@
 <body>
   <div class="scale-wrapper">
     <button id="menuBtn" class="menu-btn" onclick="toggleNav()">&#9776;</button>
+    <button class="theme-toggle" onclick="toggleTheme(this)">🌙</button>
+
+
 
     <!-- Side Navigation -->
     <div id="sideNav" class="sidenav">

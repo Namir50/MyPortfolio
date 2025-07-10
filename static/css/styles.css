@@ -25,6 +25,77 @@ body {
     z-index: 1001;
 }
 
+/* Theme Toggle Button (Top-Right Corner) */
+/* Theme Toggle Button */
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #f0f0f0;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Light Mode Styles */
+body.light-mode {
+  background: #ffffff !important;
+  color: #111111 !important;
+}
+
+body.light-mode header h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode p,
+body.light-mode a {
+  color: #111111 !important;
+}
+
+body.light-mode .menu-btn,
+body.light-mode .theme-toggle {
+  border-color: #111;
+  color: #111;
+}
+
+body.light-mode .theme-toggle:hover {
+  background: #111;
+  color: #fff;
+}
+
+body.light-mode .sidenav {
+  background-color: rgba(240, 240, 240, 0.95);
+}
+
+body.light-mode .project,
+body.light-mode .experience-item,
+body.light-mode .contact-item,
+body.light-mode .contact-links a.contact-item {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .project:hover,
+body.light-mode .experience-item:hover,
+body.light-mode .contact-item:hover,
+body.light-mode .contact-links a.contact-item:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+
 
 /* Sidebar Navigation */
 .sidenav {
