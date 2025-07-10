@@ -346,10 +346,4 @@ h2 {
     transform: scale(1);
   }
 
-  .menu-btn {
-    top: 10px;
-    left: 10px;
-    position: static; /* normal flow, moves with page */
-    margin: 10px;
-  }
 }
