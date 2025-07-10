@@ -32,8 +32,8 @@ body {
   position: fixed;
   top: 10px;
   right: 10px;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
@@ -53,7 +53,7 @@ body {
 
 /* Light Mode Styles */
 body.light-mode {
-  background: #ffffff !important;
+  background: #a9bcff !important;
   color: #111111 !important;
 }
 
@@ -100,7 +100,7 @@ body.light-mode .contact-links a.contact-item:hover {
 .sidenav {
     height: 100%;
     width: 0;
-    position: fixed;
+    position:fixed;
     z-index: 1000;
     top: 0;
     left: 0;
